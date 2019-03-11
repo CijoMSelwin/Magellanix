@@ -39,6 +39,7 @@ public class SeMethods extends Reporter implements WdMethods{
 	public static RemoteWebDriver driver;
 	public String sUrl,sHubUrl,sHubPort;
 	public Properties prop;
+	public static String strCurrentWindow;
 	
 	public SeMethods() {
 		prop = new Properties();
@@ -76,8 +77,10 @@ public class SeMethods extends Reporter implements WdMethods{
 			}
 			driver.manage().window().maximize();
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-			driver.get("http://magellanix.com/qasform/");
+			driver.get(sUrl);
+			strCurrentWindow = driver.getWindowHandle();
 			reportStep("The browser: "+browser+" launched successfully", "PASS");
+			
 		} catch (WebDriverException e) {			
 			reportStep("The browser: "+browser+" could not be launched", "FAIL");
 		}
@@ -89,6 +92,7 @@ public class SeMethods extends Reporter implements WdMethods{
 
 	public WebElement locateElement(String locator, String locValue) {
 		try {
+		
 			switch(locator) {
 			case("id"): return driver.findElementById(locValue);
 			case("link"): return driver.findElementByLinkText(locValue);
@@ -188,6 +192,15 @@ public class SeMethods extends Reporter implements WdMethods{
 	public void selectDropDownUsingText(WebElement ele, String value) {
 		try {
 			new Select(ele).selectByVisibleText(value);
+			reportStep("The dropdown is selected with text "+value,"PASS");
+		} catch (WebDriverException e) {
+			reportStep("The element: "+ele+" could not be found.", "FAIL");
+		}
+
+	}
+	public void selectDropDownUsingValue(WebElement ele, String value) {
+		try {
+			new Select(ele).selectByValue(value);
 			reportStep("The dropdown is selected with text "+value,"PASS");
 		} catch (WebDriverException e) {
 			reportStep("The element: "+ele+" could not be found.", "FAIL");
