@@ -1,6 +1,4 @@
-Feature: Open CocoCola Form 
-Validate UI Opions
-
+Feature: Resume Select CheckBox and Verify OPtions
 
 
 

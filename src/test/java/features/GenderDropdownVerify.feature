@@ -1,10 +1,9 @@
-Feature: Open CocoCola Form 
-Validate UI Opions
+Feature: GenderSelect
 
 
 
 
-Scenario Outline: Country Select with Value DE(Positive)
+Scenario Outline: GenderSelect(Positive)
 
 Given Select Gender <Gender>
 

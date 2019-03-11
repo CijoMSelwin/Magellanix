@@ -1,10 +1,9 @@
-Feature: Open CocoCola Form 
-Validate UI Opions
+Feature: Mandate Fields Coke
 
 
 
 
-Scenario Outline: Login(Positive)
+Scenario Outline: Mandate Fields Coke(Positive)
 
 Given Verify<webElementXpath> and WebElement <webElementVerifyText>
 

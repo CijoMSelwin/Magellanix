@@ -1,10 +1,9 @@
-Feature: Open CocoCola Form 
-Validate UI Opions
+Feature: Optional Field
 
 
 
-
-Scenario Outline: Login(Positive)
+@sanity
+Scenario Outline:Optional Field(Positive)
 
 Given Verify<webElementXpath> and WebElement <webElementVerifyText>
 

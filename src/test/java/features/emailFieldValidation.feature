@@ -1,10 +1,10 @@
-Feature: Open CocoCola Form 
-Validate UI Opions
+Feature:  Email
 
 
 
 
-Scenario Outline: Login(Positive)
+
+Scenario Outline: Email(Positive)
 
 Given Enter email<email>
 Then Click magellanixLastName

@@ -1,10 +1,7 @@
-Feature: Open CocoCola Form 
-Validate UI Opions
+Feature: Phone Number Validate
 
 
-
-
-Scenario Outline: Login(Positive)
+Scenario Outline: Phone Number Validate(Positive)
 
 Given Enter phoneNumber <phoneNumber>
 Then Click magellanixLastName

@@ -1,5 +1,4 @@
-Feature: Open CocoCola Form 
-Validate UI Opions
+Feature: Verify first Name entered empty
 
 
 
