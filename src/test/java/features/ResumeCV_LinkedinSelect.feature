@@ -23,10 +23,24 @@ Scenario Outline: Resume Select Using File(Positive)
 Given Click Resume
 Then Click ResumFile
 And Select fileFromLocal and clickEnter<fileName>
-
 And Get Path <path> and Common Assert <AssertData>
 Then Remove coverFile
 
 Examples: 
 |fileName|path|AssertData|
 |sample.pdf|//div[@id='resume_filename']/span|sample.pdf|
+|SamplemsWord.doc|//div[@id='resume_filename']/span|SamplemsWord.doc|
+|Sampletxt.txt|//div[@id='resume_filename']/span|Sampletxt.txt|
+
+Scenario Outline: Resume Select Using File(Negative)
+
+Given Click Resume
+Then Click ResumFile
+And Select fileFromLocal and clickEnter<fileName>
+
+And Get Path <path> and Common Assert <AssertData>
+
+Examples: 
+|fileName|path|AssertData|
+|Sample30Mb.pdf|//div[@id='resume_filename']/span|File size should be less than or equal to 5MB|
+|jpeg.jpg|//div[@id='resume_filename']/span|jpeg.jpg Supported file types: MSWord, PDF and plain text format|
