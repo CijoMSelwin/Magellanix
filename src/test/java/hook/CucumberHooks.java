@@ -9,7 +9,7 @@ public class CucumberHooks extends SeMethods{
 	@Before
 	public void begin(){
 		startResult();
-		test = startTestCase("Login", "Login to Leaftaps");
+		test = startTestCase("Coke test cases", "Login to coca cola");
 		test.assignCategory("smoke");
 		test.assignAuthor("Cijo");
 		startApp("chrome");
@@ -18,7 +18,7 @@ public class CucumberHooks extends SeMethods{
 	@Before(value = "@sanity")
 	public void beginSanity(){
 		startResult();
-		test = startTestCase("Login", "Login to Leaftaps");
+		test = startTestCase("Coke test cases", "Login to coca cola");
 		test.assignCategory("sanity");
 		test.assignAuthor("Cijo");
 		startApp("chrome");
