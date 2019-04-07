@@ -12,7 +12,7 @@ public class CucumberHooks extends SeMethods{
 		test = startTestCase("Coke test cases", "Login to coca cola");
 		test.assignCategory("smoke");
 		test.assignAuthor("Cijo");
-		startApp("chrome");
+		startApp("chrome");  
 	}
 	
 	@Before(value = "@sanity")

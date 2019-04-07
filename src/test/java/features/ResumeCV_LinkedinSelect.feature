@@ -31,6 +31,7 @@ Examples:
 |sample.pdf|//div[@id='resume_filename']/span|sample.pdf|
 |SamplemsWord.doc|//div[@id='resume_filename']/span|SamplemsWord.doc|
 |Sampletxt.txt|//div[@id='resume_filename']/span|Sampletxt.txt|
+|file-sample_100kB.docx|//div[@id='resume_filename']/span|file-sample_100kB.docx|
 
 Scenario Outline: Resume Select Using File(Negative)
 

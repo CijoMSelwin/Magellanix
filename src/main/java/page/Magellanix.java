@@ -36,6 +36,174 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80001']/label")
+	private WebElement firstnameLabel;
+	@And("Verify magellanixFirstNameLabel(.*)")
+	public Magellanix verifyFirstNamelabel(String fname)  {
+		System.out.println("fnsmd  =  "+firstnameLabel.getText());
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(firstnameLabel.getText().trim().equalsIgnoreCase(fname.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80002']/label")
+	private WebElement lastnameLabel;
+	@And("Verify magellanixlastnameLabel(.*)")
+	public Magellanix verifylastnameLabel(String lname)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(lastnameLabel.getText().trim().equalsIgnoreCase(lname.trim()));
+		return this;		
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80003']/label")
+	private WebElement emailLabel;
+	@And("Verify magellanixemailLabel(.*)")
+	public Magellanix verifyemailLabel(String email)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(emailLabel.getText().trim().equalsIgnoreCase(email.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80004']/label")
+	private WebElement phoneLabel;
+	@And("Verify magellanixphoneLabel(.*)")
+	public Magellanix verifyphoneLabel(String phone)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(phoneLabel.getText().trim().equalsIgnoreCase(phone.trim()));
+		return this;		
+	}
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80005']/label")
+	private WebElement ssnLabel;
+	@And("Verify magellanixssnLabel(.*)")
+	public Magellanix verifyssnLabel(String phone)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(ssnLabel.getText().trim().equalsIgnoreCase(phone.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80006']/label")
+	private WebElement addressLabel;
+	@And("Verify magellanixaddressLabel(.*)")
+	public Magellanix verifyaddressLabel(String phone)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(addressLabel.getText().trim().equalsIgnoreCase(phone.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80006']/label")
+	private WebElement streetAndHouseLabel;
+	@And("Verify magellanixstreetAndHouseLabel(.*)")
+	public Magellanix verifystreetAndHouseLabel(String street)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(streetAndHouseLabel.getText().trim().equalsIgnoreCase(street.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80007']/label")
+	private WebElement cityLabel;
+	@And("Verify magellanixcityLabel(.*)")
+	public Magellanix verifycityLabel(String city)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(cityLabel.getText().trim().equalsIgnoreCase(city.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80008']/label")
+	private WebElement zipLabel;
+	@And("Verify magellanixzipLabel(.*)")
+	public Magellanix verifyzipLabel(String zip)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(zipLabel.getText().trim().equalsIgnoreCase(zip.trim()));
+		return this;		
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80009']/label")
+	private WebElement countryLabel;
+	@And("Verify magellanixcountryLabel(.*)")
+	public Magellanix verifycountryLabel(String country)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(countryLabel.getText().trim().equalsIgnoreCase(country.trim()));
+		return this;		
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_6063']/label")
+	private WebElement utilisingContinousimprovementlabel;
+	@And("Verify utilisingContinousimprovementlabel(.*)")
+	public Magellanix verifyutilisingContinousimprovementlabel(String label)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(utilisingContinousimprovementlabel.getText().trim().equalsIgnoreCase(label.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_6160']/label")
+	private WebElement personalVehiclerequirementlabel;
+	@And("Verify personalVehiclerequirementlabel(.*)")
+	public Magellanix verifypersonalVehiclerequirementlabel(String label)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(personalVehiclerequirementlabel.getText().trim().equalsIgnoreCase(label.trim()));
+		return this;		
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_6109']/label")
+	private WebElement cleanUkDrivingLicenselabel;
+	@And("Verify cleanUkDrivingLicenselabel(.*)")
+	public Magellanix verifycleanUkDrivingLicenselabel(String label)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(cleanUkDrivingLicenselabel.getText().trim().equalsIgnoreCase(label.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80010']/label")
+	private WebElement resumeLabel;
+	@And("Verify magellanixresumeLabel(.*)")
+	public Magellanix verifyresumeLabel(String resume)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(resumeLabel.getText().trim().equalsIgnoreCase(resume.trim()));
+		return this;		
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_80014']/label")
+	private WebElement genderLabel;
+	@And("Verify magellanixgenderLabel(.*)")
+	public Magellanix verifygenderLabel(String genderlabel)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(genderLabel.getText().trim().equalsIgnoreCase(genderlabel.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_6064']/label")
+	private WebElement leanManufacturingTechniqueLabel;
+	@And("Verify magellanixleanManufacturingTechniqueLabel(.*)")
+	public Magellanix verifyleanManufacturingTechniqueLabel(String lean)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(leanManufacturingTechniqueLabel.getText().trim().equalsIgnoreCase(lean.trim()));
+		return this;		
+	}
+	
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_6066']/label")
+	private WebElement commercialvehicleExpLabel;
+	@And("Verify magellanixcommercialvehicleExpLabel(.*)")
+	public Magellanix verifycommercialvehicleExpLabel(String commercialVehicle)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(commercialvehicleExpLabel.getText().trim().equalsIgnoreCase(commercialVehicle.trim()));
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//div[@id='cont_6083']/label")
+	private WebElement managepplRomeotelyLabel;
+	@And("Verify magellanixmanagepplRomeotelyLabel(.*)")
+	public Magellanix verifymanagepplRomeotelyLabel(String managePeople)  {
+		//WebElement eleLogin = locateElement("name","firstName");
+		Assert.assertTrue(managepplRomeotelyLabel.getText().trim().equalsIgnoreCase(managePeople.trim()));
+		return this;		
+	}
+	
 	@FindBy(how=How.XPATH,using="//input[@name='basic[First_Name]']")
 	private WebElement firstname;
 	@And("Enter magellanixFirstName (.*)")
@@ -80,6 +248,7 @@ public class Magellanix extends ProjectMethods{
 		verifyDisplayed(contactEmail);
 		return this;		
 	}
+	
 	
 	@And("Assert magellanixCellPhone")
 	public Magellanix assertCellPhone()  {
@@ -287,6 +456,7 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	
 @FindBy(how=How.NAME,using="basic[Cell_Phone]")
 	private WebElement cellPhone;
 	@And("Enter phoneNumber (.*)")
@@ -313,6 +483,30 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@FindBy(how=How.XPATH,using="//select[@id='ques_6063']")
+	private WebElement utilisingContinousimprovementDropdown;
+	@And("Select utilisingContinousimprovementDropdown(.*)")
+	public Magellanix utilisingContinousimprovementDropdown(String data) {
+		selectDropDownUsingText(utilisingContinousimprovementDropdown, data.trim());
+		return this;		
+	}
+	
+
+	@FindBy(how=How.XPATH,using="//select[@id='ques_6109']")
+	private WebElement ukDrivingLicenseDropdown;
+	@And("Select ukDrivingLicenseDropdownDropdown(.*)")
+	public Magellanix ukDrivingLicenseDropdownDropdown(String data) {
+		selectDropDownUsingText(ukDrivingLicenseDropdown, data.trim());
+		return this;		
+	}
+	
+	@FindBy(how=How.XPATH,using="//select[@id='ques_6160']")
+	private WebElement personalVehicleDropdown;
+	@And("Select personalVehicleDropdown(.*)")
+	public Magellanix personalVehicleDropdown(String data) {
+		selectDropDownUsingText(personalVehicleDropdown, data.trim());
+		return this;		
+	}
 	
 	@FindBy(how=How.NAME,using="basic[ZIP]")
 	private WebElement zip;
