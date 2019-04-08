@@ -2,7 +2,9 @@ Feature: Optional Field
 
 
 
-@sanity
+Background: first test case
+Given Start Test Case appForm
+
 Scenario Outline:Optional Field(Positive)
 
 Given Verify<webElementXpath> and WebElement <webElementVerifyText>

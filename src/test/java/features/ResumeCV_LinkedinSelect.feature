@@ -3,6 +3,8 @@ Validate UI Opions
 
 
 
+Background: first test case
+Given Start Test Case appForm
 
 Scenario Outline: Resume Select Using linkedin(Positive)
 

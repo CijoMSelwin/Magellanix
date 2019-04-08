@@ -2,6 +2,8 @@ Feature: Mandate Fields Coke
 
 
 
+Background: first test case
+Given Start Test Case appForm
 
 Scenario Outline: Mandate Fields Coke(Positive)
 

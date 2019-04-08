@@ -1,5 +1,8 @@
 Feature: Coverletter
 
+Background: first test case
+Given Start Test Case appForm
+
 Scenario Outline: Coverletter Using File(Positive)
 
 Given Click coverLetter

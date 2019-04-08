@@ -2,6 +2,8 @@ Feature: Resume UI Mandate Validation
 
 
 
+Background: first test case
+Given Start Test Case appForm
 
 Scenario Outline: Resume UI Mandate Validation
 

@@ -2,6 +2,8 @@ Feature: GenderSelect
 
 
 
+Background: first test case
+Given Start Test Case appForm
 
 Scenario Outline: GenderSelect(Positive)
 

@@ -1,6 +1,8 @@
 Feature: Country Select and Ui Verification
 
 
+Background: first test case
+Given Start Test Case appForm
 
 Scenario Outline: Country Select with Value IS - file(Positive)
 

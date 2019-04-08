@@ -1,5 +1,7 @@
 Feature: Phone Number Validate
 
+Background: first test case
+Given Start Test Case appForm
 
 Scenario Outline: Phone Number Validate(Positive)
 

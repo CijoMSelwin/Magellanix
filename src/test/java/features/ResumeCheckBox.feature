@@ -2,6 +2,9 @@ Feature: Resume Select CheckBox and Verify OPtions
 
 
 
+Background: first test case
+Given Start Test Case appForm
+
 Scenario Outline: Resume Select CheckBox and Verify OPtions(Positive)
 
 Given Click Resume

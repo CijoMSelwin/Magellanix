@@ -1,6 +1,8 @@
 Feature: Country Select with Value
 
 
+Background: first test case
+Given Start Test Case appForm
 
 Scenario Outline: Country Select with Value DE(Positive)
 

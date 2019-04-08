@@ -2,6 +2,8 @@ Feature: Verify first Name entered empty
 
 
 
+Background: first test case
+Given Start Test Case appForm
 
 Scenario Outline: Verify first Name entered empty
 
