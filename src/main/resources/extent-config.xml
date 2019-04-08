@@ -14,10 +14,10 @@
     <protocol>https</protocol>
     
     <!-- title of the document -->
-    <documentTitle>TestLeaf Selenium Automation Project</documentTitle>
+    <documentTitle>Coco cola application automation</documentTitle>
     
     <!-- report name - displayed at top-nav -->
-    <reportName>TestLeaf Selenium </reportName>
+    <reportName>Coco cola </reportName>
     
     <!-- report headline - displayed at top-nav, after reportHeadline -->
     <reportHeadline>POM Test Automation Report</reportHeadline>
