@@ -37,7 +37,7 @@ import utils.Reporter;
 public class SeMethods extends Reporter implements WdMethods{
 
 	public static RemoteWebDriver driver;
-	public String sUrl,sHubUrl,sHubPort;
+	public String sUrl,sHubUrl,sHubPort,tcsUrl;
 	public Properties prop;
 	public static String strCurrentWindow;
 	
@@ -48,10 +48,49 @@ public class SeMethods extends Reporter implements WdMethods{
 			sHubUrl = prop.getProperty("HUB");
 			sHubPort = prop.getProperty("PORT");
 			sUrl = prop.getProperty("URL");
+			tcsUrl = prop.getProperty("TCSURl");
+			
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
+		}
+	}
+	public void startApp(String browser, boolean bRemote , String Url) {
+		try {
+			DesiredCapabilities dc = new DesiredCapabilities();
+			dc.setBrowserName(browser);
+			dc.setPlatform(Platform.WINDOWS);
+			// this is for grid run
+			if(bRemote)
+				try {
+					driver = new RemoteWebDriver(new URL("http://"+sHubUrl+":"+sHubPort+"/wd/hub"), dc);
+				} catch (MalformedURLException e) {
+				}
+			else{ // this is for local run
+				if(browser.equalsIgnoreCase("chrome")){
+					System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+					driver = new ChromeDriver();
+				}else {
+					System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
+					driver = new FirefoxDriver();
+				}
+			}
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+			if(Url.equalsIgnoreCase("appForm")) {
+			driver.get(sUrl);}
+			else if(Url.equalsIgnoreCase("tcsForm")){
+				driver.get(tcsUrl);
+			}
+			else {
+				driver.get(Url);
+			}
+			strCurrentWindow = driver.getWindowHandle();
+			reportStep("The browser: "+browser+" launched successfully", "PASS");
+			
+		} catch (WebDriverException e) {			
+			reportStep("The browser: "+browser+" could not be launched", "FAIL");
 		}
 	}
 
@@ -86,6 +125,7 @@ public class SeMethods extends Reporter implements WdMethods{
 		}
 	}
 
+	
 	public void startApp(String browser) {
 		startApp(browser, false);
 	}

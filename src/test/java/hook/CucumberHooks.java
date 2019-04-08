@@ -2,9 +2,16 @@ package hook;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
+import cucumber.api.java.en.And;
 import wdMethods.SeMethods;
 
 public class CucumberHooks extends SeMethods{
+	
+
+	@And("Start Test Case(.*)")
+	public void startTestCases(String UrlDetails) {
+		startApp("chrome",false,UrlDetails.trim());  
+	}
 	
 	@Before
 	public void begin(){
@@ -12,7 +19,7 @@ public class CucumberHooks extends SeMethods{
 		test = startTestCase("Coke test cases", "Login to coca cola");
 		test.assignCategory("smoke");
 		test.assignAuthor("Cijo");
-		startApp("chrome");  
+		
 	}
 	
 	@Before(value = "@sanity")
