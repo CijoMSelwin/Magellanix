@@ -23,6 +23,3 @@ Examples:
 |//div[@id='cont_80009']/label|Country| 
 |//div[@id='cont_80010']/label|Resume / CV|
 |//div[@id='cont_80014']/label|How would you describe your Gender?|
-|//div[@id='cont_6064']/label|Do you have previous experience of working with Lean Manufacturing techniques?|
-|//div[@id='cont_6066']/label|Do you have experience driving a  commercial vehicle?|
-|//div[@id='cont_6083']/label|Do you have experience of managing people remotely?|
