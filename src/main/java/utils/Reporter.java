@@ -1,6 +1,8 @@
 package utils;
 
 import java.io.File;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -49,7 +51,9 @@ public abstract class Reporter {
 	
 
 	public ExtentReports startResult(){
-		extent = new ExtentReports("./reports/result.html", false);
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("yyyy/MM/dd");
+		LocalDate localDate = LocalDate.now();
+		extent = new ExtentReports("./reports/result"+localDate.toString()+".html", false);
 		extent.loadConfig(new File("./src/main/resources/extent-config.xml"));
 		return extent;
 	}
