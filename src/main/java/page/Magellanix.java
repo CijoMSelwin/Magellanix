@@ -36,6 +36,13 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@And("Assert custom_InstrDiversityText(.*)")
+	public Magellanix custom_InstrDiversityText(String data)  {
+		Assert.assertTrue(cust_InstrDiversityText.getText().trim().contains(data.trim()));
+		return this;		
+	}
+	
+	
 	@FindBy(how=How.XPATH,using="//div[@id='cont_80001']/label")
 	private WebElement firstnameLabel;
 	@And("Verify magellanixFirstNameLabel(.*)")
@@ -356,6 +363,12 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@And("Assert PTagreeToCareerOppurtunityText")
+	public Magellanix assertagreeToCareerOppurtunityTextPT()  {
+		System.out.println(agreeToCareerOppurtunityText.getText().trim());
+		Assert.assertTrue(agreeToCareerOppurtunityText.getText().trim().contains("Saber mais sobre oportunidades de carreira"));
+		return this;		
+	}
 	
 	@FindBy(how=How.XPATH,using="//div[@id='cont_80021']/label/span")
 	private WebElement agreeToCareerOppurtunitycheckbox;
@@ -413,6 +426,13 @@ public class Magellanix extends ProjectMethods{
 	@And("Assert ISagreeToDataPrivacyStatement")
 	public Magellanix assertagreeToDataPrivacyStatementIS()  {
 		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("Ég hef lesið og samþykki perónusverndarstefnu CCEP "));
+		return this;		
+	}
+	
+	
+	@And("Assert PTagreeToDataPrivacyStatement")
+	public Magellanix assertagreeToDataPrivacyStatementPT()  {
+		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("Reveja a Declaração de Privacidade dos Dados"));
 		return this;		
 	}
 	
@@ -758,6 +778,11 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@And("Verify SubmitLabel(.*)")
+	public Magellanix SubmitLabel(String data) {
+		Assert.assertTrue(resumeSelect.getText().trim().equalsIgnoreCase(data.trim()));
+		return this;		
+	}
 	
 	@FindBy(how=How.XPATH,using="(//button[@data-toggle='dropdown'])[2]")
 	private WebElement CoverSelect;
