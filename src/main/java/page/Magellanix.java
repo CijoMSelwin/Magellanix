@@ -327,6 +327,21 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@And("Assert ESagreeToCareerOppurtunityText")
+	public Magellanix assertagreeToCareerOppurtunityTextES()  {
+		System.out.println(agreeToCareerOppurtunityText.getText().trim());
+		Assert.assertTrue(agreeToCareerOppurtunityText.getText().trim().contains("Obtener más información sobre puestos vacantes"));
+		return this;		
+	}
+	
+
+	@And("Assert SVagreeToCareerOppurtunityText")
+	public Magellanix assertagreeToCareerOppurtunityTextSV()  {
+		System.out.println(agreeToCareerOppurtunityText.getText().trim());
+		Assert.assertTrue(agreeToCareerOppurtunityText.getText().trim().contains("Mer information om karriärmöjligheter"));
+		return this;		
+	}
+	
 	@FindBy(how=How.XPATH,using="//div[@id='cont_80021']/label/span")
 	private WebElement agreeToCareerOppurtunitycheckbox;
 	@And("click agreeToCareerOppurtunitycheckbox")
@@ -362,6 +377,17 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@And("Assert ESagreeToDataPrivacyStatement")
+	public Magellanix assertagreeToDataPrivacyStatementES()  {
+		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("Revisar Declaración de privacidad de datos"));
+		return this;		
+	}
+	
+	@And("Assert SVagreeToDataPrivacyStatement")
+	public Magellanix assertagreeToDataPrivacyStatementSV()  {
+		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("Godkänn Dataintegritetspolicy"));
+		return this;		
+	}
 	
 	@FindBy(how=How.XPATH,using="//div[@id='cont_80016']/label/span")
 	private WebElement agreeToDataPrivacyStatementcheckBox;

@@ -2,7 +2,6 @@ Feature: Country Select as France and Ui Verification
 
 
 
-
 Scenario Outline: Country Select with Value France(Positive)
 Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=fr
 Then Assert magellanixFirstName
@@ -67,7 +66,7 @@ Examples:
 
 
 #3
-Scenario Outline: Country Select with Value Netherand(Positive)
+Scenario Outline: Country Select with Value Spain(Positive)
 Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=nl
 Then Assert magellanixFirstName
 And Verify magellanixFirstNameLabel <FirstName>
@@ -95,4 +94,69 @@ Examples:
 
 |CountryCode|FirstName|genderlabel|
 |DE|Voornaam|Quel est votre genre ?|
+
+
+#4
+Scenario Outline: Country Select with Value spain(Positive)
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=es
+Then Assert magellanixFirstName
+And Verify magellanixFirstNameLabel <FirstName>
+And Assert magellanixLastName
+And Verify magellanixlastnameLabel Apellido
+And Assert magellanixContactEmail
+And Verify magellanixemailLabel Correo Electrónico 
+And Assert magellanixCellPhone
+And Verify magellanixphoneLabel Nº Teléfono de Contacto 
+And Verify magellanixaddressLabel Dirección
+And Assert magellanixCity
+And Verify magellanixcityLabel Ciudad 
+And Verify magellanixzipLabel Código postal 
+And Assert magellanixCountry
+And Verify magellanixcountryLabel País 
+And Assert magellanixResume
+And Verify magellanixresumeLabel CV
+#And Assert cust_InstrDiversityText
+And Assert ESagreeToCareerOppurtunityText
+And Assert ESagreeToDataPrivacyStatement
+
+
+
+Examples: 
+
+|CountryCode|FirstName|
+|DE|Nombre de pila|
+
+
+
+
+#5
+Scenario Outline: Country Select with Value SV(Positive)
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=sv
+Then Assert magellanixFirstName
+And Verify magellanixFirstNameLabel <FirstName>
+And Assert magellanixLastName
+And Verify magellanixlastnameLabel Efternamn
+And Assert magellanixContactEmail
+And Verify magellanixemailLabel Mailadress 
+And Assert magellanixCellPhone
+And Verify magellanixphoneLabel Telefonnummer
+And Verify magellanixaddressLabel Adressrad 1 
+And Assert magellanixCity
+And Verify magellanixcityLabel Ort  
+And Verify magellanixzipLabel Postnummer
+And Assert magellanixCountry
+And Verify magellanixcountryLabel Land
+And Assert magellanixResume
+And Verify magellanixresumeLabel Meritförteckning/CV
+#And Assert cust_InstrDiversityText
+And Assert SVagreeToCareerOppurtunityText
+And Assert SVagreeToDataPrivacyStatement
+
+
+
+Examples: 
+
+|CountryCode|FirstName|
+|DE|Förnamn|
+
 
