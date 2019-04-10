@@ -1,7 +1,6 @@
 Feature: Country Select as France and Ui Verification
 
 
-
 Scenario Outline: Country Select with Value France(Positive)
 Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=fr
 Then Assert magellanixFirstName
@@ -160,3 +159,65 @@ Examples:
 |DE|Förnamn|
 
 
+
+#6
+Scenario Outline: Country Select with Value NB(Positive)
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=nb
+Then Assert magellanixFirstName
+And Verify magellanixFirstNameLabel <FirstName>
+And Assert magellanixLastName
+And Verify magellanixlastnameLabel Etternavn
+And Assert magellanixContactEmail
+And Verify magellanixemailLabel E-post 
+And Assert magellanixCellPhone
+And Verify magellanixphoneLabel Telefonnummer 
+And Verify magellanixaddressLabel Adresselinje 1  
+And Assert magellanixCity
+And Verify magellanixcityLabel Sted   
+And Verify magellanixzipLabel Postnummer 
+And Assert magellanixCountry
+And Verify magellanixcountryLabel Land
+And Assert magellanixResume
+And Verify magellanixresumeLabel CV 
+#And Assert cust_InstrDiversityText
+And Assert NBagreeToCareerOppurtunityText
+And Assert NBagreeToDataPrivacyStatement
+
+
+
+Examples: 
+
+|CountryCode|FirstName|
+|DE|Fornavn|
+
+
+
+#7
+Scenario Outline: Country Select with Value Iceland(Positive)
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=is-IS
+Then Assert magellanixFirstName
+And Verify magellanixFirstNameLabel <FirstName>
+And Assert magellanixLastName
+And Verify magellanixlastnameLabel Eftirnafn
+And Assert magellanixContactEmail
+And Verify magellanixemailLabel Netfang
+And Assert magellanixCellPhone
+And Verify magellanixphoneLabel Símanúmer 
+And Verify magellanixaddressLabel Heimilsfang 
+And Assert magellanixCity
+And Verify magellanixcityLabel Staður    
+And Verify magellanixzipLabel Póstnúmer 
+And Assert magellanixCountry
+And Verify magellanixcountryLabel Land 
+And Assert magellanixResume
+And Verify magellanixresumeLabel Ferilskrá 
+#And Assert cust_InstrDiversityText
+And Assert ISagreeToCareerOppurtunityText
+And Assert ISagreeToDataPrivacyStatement
+
+
+
+Examples: 
+
+|CountryCode|FirstName|
+|DE|Nafn|
