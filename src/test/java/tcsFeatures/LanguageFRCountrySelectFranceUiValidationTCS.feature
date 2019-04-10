@@ -1,20 +1,17 @@
-Feature: Country Select  and Ui Verification
+Feature: Country Select as France and Ui Verification
 
 
 Scenario Outline: Country Select with Value France(Positive)
-Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=fr
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=TCS&country=GB&lang=fr
 Then Assert magellanixFirstName
 And Verify magellanixFirstNameLabel <FirstName>
 And Assert magellanixLastName
 And Verify magellanixlastnameLabel Nom de famille
 And Assert magellanixContactEmail
-And Verify magellanixemailLabel Adresse e-mail
 And Assert magellanixCellPhone
 And Verify magellanixphoneLabel Numéro de téléphone
-And Verify magellanixaddressLabel Adresse – Ligne 1
 And Assert magellanixCity
 And Verify magellanixcityLabel Ville
-And Verify magellanixzipLabel Code postal 
 And Assert magellanixCountry
 And Verify magellanixcountryLabel Pays
 And Assert magellanixResume
@@ -35,7 +32,7 @@ Examples:
 
 #2
 Scenario Outline: Country Select with Value German(Positive)
-Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=de
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=TCS&country=GB&lang=de
 Given Select Country <CountryCode>
 Then Assert magellanixFirstName
 And Verify magellanixFirstNameLabel <FirstName>
@@ -45,10 +42,8 @@ And Assert magellanixContactEmail
 And Verify magellanixemailLabel E-Mail 
 And Assert magellanixCellPhone
 And Verify magellanixphoneLabel Telefonnummer 
-And Verify magellanixaddressLabel Straße und Hausnummer
 And Assert magellanixCity
 And Verify magellanixcityLabel Stadt
-And Verify magellanixzipLabel Postleitzahl
 And Assert magellanixCountry
 And Verify magellanixcountryLabel Land
 And Assert magellanixResume
@@ -69,7 +64,7 @@ Examples:
 
 #3
 Scenario Outline: Country Select with Value Spain(Positive)
-Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=nl
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=TCS&country=GB&lang=nl
 Then Assert magellanixFirstName
 And Verify magellanixFirstNameLabel <FirstName>
 And Assert magellanixLastName
@@ -78,10 +73,9 @@ And Assert magellanixContactEmail
 And Verify magellanixemailLabel E-mail
 And Assert magellanixCellPhone
 And Verify magellanixphoneLabel Telefoonnummer  
-And Verify magellanixaddressLabel Adresregel 1
+
 And Assert magellanixCity
 And Verify magellanixcityLabel Stad 
-And Verify magellanixzipLabel Postcode
 And Assert magellanixCountry
 And Verify magellanixcountryLabel Land
 And Assert magellanixResume
@@ -102,7 +96,7 @@ Examples:
 
 #4
 Scenario Outline: Country Select with Value spain(Positive)
-Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=es
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=TCS&country=GB&lang=es
 Then Assert magellanixFirstName
 And Verify magellanixFirstNameLabel <FirstName>
 And Assert magellanixLastName
@@ -111,10 +105,9 @@ And Assert magellanixContactEmail
 And Verify magellanixemailLabel Correo Electrónico 
 And Assert magellanixCellPhone
 And Verify magellanixphoneLabel Nº Teléfono de Contacto 
-And Verify magellanixaddressLabel Dirección
+
 And Assert magellanixCity
 And Verify magellanixcityLabel Ciudad 
-And Verify magellanixzipLabel Código postal 
 And Assert magellanixCountry
 And Verify magellanixcountryLabel País 
 And Assert magellanixResume
@@ -171,7 +164,7 @@ Examples:
 
 #6
 Scenario Outline: Country Select with Value NB(Positive)
-Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=nb
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=TCS&country=GB&lang=nb
 Then Assert magellanixFirstName
 And Verify magellanixFirstNameLabel <FirstName>
 And Assert magellanixLastName
@@ -180,10 +173,8 @@ And Assert magellanixContactEmail
 And Verify magellanixemailLabel E-post 
 And Assert magellanixCellPhone
 And Verify magellanixphoneLabel Telefonnummer 
-And Verify magellanixaddressLabel Adresselinje 1  
 And Assert magellanixCity
-And Verify magellanixcityLabel Sted   
-And Verify magellanixzipLabel Postnummer 
+And Verify magellanixcityLabel Sted    
 And Assert magellanixCountry
 And Verify magellanixcountryLabel Land
 And Assert magellanixResume
@@ -205,7 +196,7 @@ Examples:
 
 #7
 Scenario Outline: Country Select with Value Iceland(Positive)
-Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=is-IS
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=TCS&country=GB&lang=is-IS
 Then Assert magellanixFirstName
 And Verify magellanixFirstNameLabel <FirstName>
 And Assert magellanixLastName
@@ -214,10 +205,8 @@ And Assert magellanixContactEmail
 And Verify magellanixemailLabel Netfang
 And Assert magellanixCellPhone
 And Verify magellanixphoneLabel Símanúmer 
-And Verify magellanixaddressLabel Heimilsfang 
 And Assert magellanixCity
-And Verify magellanixcityLabel Staður    
-And Verify magellanixzipLabel Póstnúmer 
+And Verify magellanixcityLabel Staður     
 And Assert magellanixCountry
 And Verify magellanixcountryLabel Land 
 And Assert magellanixResume
@@ -237,7 +226,7 @@ Examples:
 
 #8
 Scenario Outline: Country Select with Value PT
-Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=5001&country=GB&lang=pt
+Given Start Test Case https://cctest-auto.azurewebsites.net/?req_id=TCS&country=GB&lang=pt
 Then Assert magellanixFirstName
 And Verify magellanixFirstNameLabel <FirstName>
 And Assert magellanixLastName
@@ -246,10 +235,8 @@ And Assert magellanixContactEmail
 And Verify magellanixemailLabel O email 
 And Assert magellanixCellPhone
 And Verify magellanixphoneLabel Número de telefone
-And Verify magellanixaddressLabel Morada 
 And Assert magellanixCity
-And Verify magellanixcityLabel Cidade   
-And Verify magellanixzipLabel Código postal 
+And Verify magellanixcityLabel Cidade    
 And Assert magellanixCountry
 And Verify magellanixcountryLabel País 
 And Assert magellanixResume

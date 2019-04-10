@@ -353,6 +353,7 @@ public class SeMethods extends Reporter implements WdMethods{
 			List<String> allHandles = new ArrayList<>();
 			allHandles.addAll(allWindowHandles);
 			driver.switchTo().window(allHandles.get(index));
+		
 		} catch (NoSuchWindowException e) {
 			reportStep("The driver could not move to the given window by index "+index,"PASS");
 		} catch (WebDriverException e) {

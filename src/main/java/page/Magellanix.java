@@ -36,6 +36,13 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@And("Assert custom_InstrDiversityText(.*)")
+	public Magellanix custom_InstrDiversityText(String data)  {
+		Assert.assertTrue(cust_InstrDiversityText.getText().trim().contains(data.trim()));
+		return this;		
+	}
+	
+	
 	@FindBy(how=How.XPATH,using="//div[@id='cont_80001']/label")
 	private WebElement firstnameLabel;
 	@And("Verify magellanixFirstNameLabel(.*)")
@@ -356,6 +363,12 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@And("Assert PTagreeToCareerOppurtunityText")
+	public Magellanix assertagreeToCareerOppurtunityTextPT()  {
+		System.out.println(agreeToCareerOppurtunityText.getText().trim());
+		Assert.assertTrue(agreeToCareerOppurtunityText.getText().trim().contains("Saber mais sobre oportunidades de carreira"));
+		return this;		
+	}
 	
 	@FindBy(how=How.XPATH,using="//div[@id='cont_80021']/label/span")
 	private WebElement agreeToCareerOppurtunitycheckbox;
@@ -413,6 +426,13 @@ public class Magellanix extends ProjectMethods{
 	@And("Assert ISagreeToDataPrivacyStatement")
 	public Magellanix assertagreeToDataPrivacyStatementIS()  {
 		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("Ég hef lesið og samþykki perónusverndarstefnu CCEP "));
+		return this;		
+	}
+	
+	
+	@And("Assert PTagreeToDataPrivacyStatement")
+	public Magellanix assertagreeToDataPrivacyStatementPT()  {
+		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("Reveja a Declaração de Privacidade dos Dados"));
 		return this;		
 	}
 	
@@ -526,7 +546,16 @@ public class Magellanix extends ProjectMethods{
 		click(contactEmail);
 		return this;		
 	}
+	//Click LinkToDPCS
 	
+	 @FindBy(how=How.XPATH,using="//div[@id='cont_80016']/label/a")
+		private WebElement dpcsLink;
+		@And("Click LinkToDPCS")
+		public Magellanix clickDpcsLink() {
+			//WebElement eleLogin = locateElement("class","decorativeSubmit");
+			click(dpcsLink);
+			return this;		
+		}
 	
 	@Then ("Click PhoneNumber")
 	public Magellanix clickPhone()  {
@@ -606,130 +635,7 @@ public class Magellanix extends ProjectMethods{
 		type(zip, data);
 		return this;		
 	}
-	/*
-	@FindBy(how=How.NAME,using="cust_SSN")
-	private WebElement socialSecrityNumber;
-	@And("enter companyName (.*)")
-	public Magellanix entersocialSecrityNumber(String data) {
-		//WebElement eleLogin = locateElement("class","decorativeSubmit");
-		type(socialSecrityNumber, data);
-		return this;		
-	}
 	
-
-	@FindBy(how=How.NAME,using="address")
-	private WebElement address;
-	@And("enter companyName (.*)")
-	public Magellanix enteraddress(String data) {
-		//WebElement eleLogin = locateElement("class","decorativeSubmit");
-		type(address, data);
-		return this;		
-	}
-	
-	
-	
-	
-	
-	
-	@FindBy(how=How.XPATH,using="//select[@name='questions']")
-	private WebElement dynamicQuestionsSelect;
-	@And("enter companyName (.*)")
-	public Magellanix dynamicQuestionsSelect(String data) {
-		selectDropDownUsingText(dynamicQuestionsSelect, data);
-		return this;		
-	}
-	
-	@FindBy(how=How.NAME,using="country")
-	private WebElement countryDropdown;
-	@And("enter companyName (.*)")
-	public Magellanix selectCountry(String data) {
-		selectDropDownUsingText(countryDropdown, data);
-		return this;		
-	}
-	
-	
-	@FindBy(how=How.XPATH,using="(//button[@data-toggle='dropdown'])[2]")
-	private WebElement coverLetterSelect;
-	@And("enter companyName (.*)")
-	public Magellanix coverLetterSelect() {
-		click(coverLetterSelect);
-		return this;		
-	}
-	
-	
-	@FindBy(how=How.XPATH,using="//input[starts-with(@name,'cust_ ')]")
-	private WebElement referenceDetailsEnter;
-	@And("enter companyName (.*)")
-	public Magellanix referenceDetailsEnter(String data) {
-		type(referenceDetailsEnter,data);
-		return this;		
-	}
-	
-	
-
-	@FindBy(how=How.NAME,using="ethnicity")
-	private WebElement ethnicity;
-	@And("enter companyName (.*)")
-	public Magellanix ethnicitySelect(String data) {
-		selectDropDownUsingText(ethnicity, data);
-		return this;		
-	}
-	
-	
-	@FindBy(how=How.NAME,using="questions")
-	private WebElement dynamicQuestionsEnter;
-	@And("enter companyName (.*)")
-	public Magellanix dynamicQuestionsEnter(String data) {
-		type(dynamicQuestionsEnter,data);
-		return this;		
-	}
-	
-	
-	
-	
-	
-	@FindBy(how=How.XPATH,using="//label[@class='check']/span[@class='checkmark']")
-	private WebElement dataprivacyConditionSelect;
-	@And("enter companyName (.*)")
-	public Magellanix dataprivacyConditionSelect() {
-		click(dataprivacyConditionSelect);
-		return this;		
-	}
-	
-	@FindBy(how=How.XPATH,using="(//label[@class='check']/span[@class='checkmark'])[2]")
-	private WebElement personalDataCheckboxSelect;
-	@And("enter companyName (.*)")
-	public Magellanix personalDataCheckboxSelect() {
-		click(personalDataCheckboxSelect);
-		return this;		
-	}
-	
-	
-	@FindBy(how=How.XPATH,using="(//label[@class='check']/span[@class='checkmark'])[3]")
-	private WebElement personalityTestConsentSelect;
-	@And("enter companyName (.*)")
-	public Magellanix personalityTestConsentSelect() {
-		click(personalityTestConsentSelect);
-		return this;		
-	}
-	
-	
-	@FindBy(how=How.XPATH,using="(//label[@class='check']/span[@class='checkmark'])[4]")
-	private WebElement personalDataStoreSelect;
-	@And("enter companyName (.*)")
-	public Magellanix personalDataStoreSelect() {
-		click(personalDataStoreSelect);
-		return this;		
-	}
-	
-	@FindBy(how=How.XPATH,using="//input[@type='submit']")
-	private WebElement submitButton;
-	@And("enter companyName (.*)")
-	public Magellanix clickSubmitButton() {
-		click(submitButton);
-		return this;		
-	}
-	*/
 	
 	@And("Verify(.*) and WebElement (.*)")
 	public Magellanix AssertUsingWebelementPresent(String xpathValue ,String verifyText) {
@@ -758,6 +664,11 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
+	@And("Verify SubmitLabel(.*)")
+	public Magellanix SubmitLabel(String data) {
+		Assert.assertTrue(resumeSelect.getText().trim().equalsIgnoreCase(data.trim()));
+		return this;		
+	}
 	
 	@FindBy(how=How.XPATH,using="(//button[@data-toggle='dropdown'])[2]")
 	private WebElement CoverSelect;
@@ -865,6 +776,13 @@ public class Magellanix extends ProjectMethods{
 		return this;		
 	}
 	
-	
+  @FindBy(how=How.XPATH,using="//h2[@class='clear']")
+	private WebElement langDesc;
+	@And("Verify languageDesc(.*)")
+	public Magellanix verifylangDesc(String data) {
+        driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+        Assert.assertTrue(langDesc.getText().trim().equals(data.trim()));
+		return this;		
+	}
 	
 }
