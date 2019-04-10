@@ -308,6 +308,24 @@ public class Magellanix extends ProjectMethods{
 		Assert.assertTrue(agreeToCareerOppurtunityText.getText().trim().contains("Hear more about career opportunities"));
 		return this;		
 	}
+	@And("Assert FRagreeToCareerOppurtunityText")
+	public Magellanix assertagreeToCareerOppurtunityTextFR()  {
+		System.out.println(agreeToCareerOppurtunityText.getText().trim());
+		Assert.assertTrue(agreeToCareerOppurtunityText.getText().trim().contains("En savoir plus sur les opportunités de carrière"));
+		return this;		
+	}
+	@And("Assert GerManyagreeToCareerOppurtunityText")
+	public Magellanix assertagreeToCareerOppurtunityTextGerMany()  {
+		System.out.println(agreeToCareerOppurtunityText.getText().trim());
+		Assert.assertTrue(agreeToCareerOppurtunityText.getText().trim().contains("Ich möchte mehr über Karrieremöglichkeiten bei CCEP erfahren."));
+		return this;		
+	}
+	@And("Assert NLagreeToCareerOppurtunityText")
+	public Magellanix assertagreeToCareerOppurtunityTextNl()  {
+		System.out.println(agreeToCareerOppurtunityText.getText().trim());
+		Assert.assertTrue(agreeToCareerOppurtunityText.getText().trim().contains("Meer horen over carrièremogelijkheden"));
+		return this;		
+	}
 	
 	@FindBy(how=How.XPATH,using="//div[@id='cont_80021']/label/span")
 	private WebElement agreeToCareerOppurtunitycheckbox;
@@ -326,6 +344,24 @@ public class Magellanix extends ProjectMethods{
 		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("I have read and accept the data privacy statement"));
 		return this;		
 	}
+	
+	@And("Assert FRagreeToDataPrivacyStatement")
+	public Magellanix assertagreeToDataPrivacyStatementFR()  {
+		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("Revue Déclaration de confidentialité des données"));
+		return this;		
+	}
+	@And("Assert GRagreeToDataPrivacyStatement")
+	public Magellanix assertagreeToDataPrivacyStatementGR()  {
+		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("Ich habe die"));
+		return this;		
+	}
+	
+	@And("Assert NLagreeToDataPrivacyStatement")
+	public Magellanix assertagreeToDataPrivacyStatementNL()  {
+		Assert.assertTrue(agreeToDataPrivacyStatementText.getText().trim().contains("Raadpleeg Privacyverklaring"));
+		return this;		
+	}
+	
 	
 	@FindBy(how=How.XPATH,using="//div[@id='cont_80016']/label/span")
 	private WebElement agreeToDataPrivacyStatementcheckBox;
